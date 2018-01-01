@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
-ruby '2.3.3'
+# frozen_string_literal: true
+source "https://rubygems.org"
 
-# Added at 2018-01-01 16:44:41 +0000 by samhouston:
+# gem "rails"
+
+# Added at 2018-01-01 16:51:03 +0000 by samhouston:
 gem "sass", "~> 3.5"
