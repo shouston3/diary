@@ -2,8 +2,8 @@
 
 set -e
 
-CURRENT_NAME="Pete"
-CURRENT_OTP="pete"
+CURRENT_NAME="Diary"
+CURRENT_OTP="diary"
 
 NEW_NAME="Diary"
 NEW_OTP="diary"

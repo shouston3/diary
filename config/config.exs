@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :pete,
-  ecto_repos: [Pete.Repo]
+config :diary,
+  ecto_repos: [Diary.Repo]
 
 # Configures the endpoint
-config :pete, PeteWeb.Endpoint,
+config :diary, DiaryWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "peKwAEw/1unukI0H32BDtwSUKSY5+kxSm/MuUwjOYfZAPZYComuGVaTBHuXLPWSs",
-  render_errors: [view: PeteWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Pete.PubSub,
+  render_errors: [view: DiaryWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Diary.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

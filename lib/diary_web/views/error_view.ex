@@ -1,5 +1,5 @@
-defmodule PeteWeb.ErrorView do
-  use PeteWeb, :view
+defmodule DiaryWeb.ErrorView do
+  use DiaryWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

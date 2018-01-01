@@ -1,5 +1,5 @@
-defmodule PeteWeb.PageControllerTest do
-  use PeteWeb.ConnCase
+defmodule DiaryWeb.PageControllerTest do
+  use DiaryWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

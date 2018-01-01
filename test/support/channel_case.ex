@@ -1,4 +1,4 @@
-defmodule PeteWeb.ChannelCase do
+defmodule DiaryWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule PeteWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint PeteWeb.Endpoint
+      @endpoint DiaryWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Pete.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Diary.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Pete.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Diary.Repo, {:shared, self()})
     end
     :ok
   end

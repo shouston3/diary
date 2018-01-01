@@ -1,12 +1,12 @@
-defmodule PeteWeb do
+defmodule DiaryWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PeteWeb, :controller
-      use PeteWeb, :view
+      use DiaryWeb, :controller
+      use DiaryWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,17 +19,17 @@ defmodule PeteWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PeteWeb
+      use Phoenix.Controller, namespace: DiaryWeb
       import Plug.Conn
-      import PeteWeb.Router.Helpers
-      import PeteWeb.Gettext
+      import DiaryWeb.Router.Helpers
+      import DiaryWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/pete_web/templates",
-                        namespace: PeteWeb
+      use Phoenix.View, root: "lib/diary_web/templates",
+                        namespace: DiaryWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,10 +37,10 @@ defmodule PeteWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import PeteWeb.Router.Helpers
-      import PeteWeb.ErrorHelpers
-      import PeteWeb.Gettext
-      import PeteWeb.ViewHelpers
+      import DiaryWeb.Router.Helpers
+      import DiaryWeb.ErrorHelpers
+      import DiaryWeb.Gettext
+      import DiaryWeb.ViewHelpers
     end
   end
 
@@ -55,7 +55,7 @@ defmodule PeteWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import PeteWeb.Gettext
+      import DiaryWeb.Gettext
     end
   end
 

@@ -1,5 +1,5 @@
-defmodule PeteWeb.Router do
-  use PeteWeb, :router
+defmodule DiaryWeb.Router do
+  use DiaryWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule PeteWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PeteWeb do
+  scope "/", DiaryWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PeteWeb do
+  # scope "/api", DiaryWeb do
   #   pipe_through :api
   # end
 end

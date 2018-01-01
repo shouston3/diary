@@ -1,4 +1,4 @@
-defmodule Pete.Application do
+defmodule Diary.Application do
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
@@ -9,23 +9,23 @@ defmodule Pete.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Pete.Repo, []),
+      supervisor(Diary.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(PeteWeb.Endpoint, []),
-      # Start your own worker by calling: Pete.Worker.start_link(arg1, arg2, arg3)
-      # worker(Pete.Worker, [arg1, arg2, arg3]),
+      supervisor(DiaryWeb.Endpoint, []),
+      # Start your own worker by calling: Diary.Worker.start_link(arg1, arg2, arg3)
+      # worker(Diary.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Pete.Supervisor]
+    opts = [strategy: :one_for_one, name: Diary.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    PeteWeb.Endpoint.config_change(changed, removed)
+    DiaryWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

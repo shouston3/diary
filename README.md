@@ -1,4 +1,4 @@
-# Pete
+# Diary
 
 # What and Why
 
@@ -19,7 +19,7 @@ I like to keep a terminal open and watch for changes for each of my sass, js and
 # How
 
 ```bash
-git clone https://github.com/shouston3/pete_boilerplate.git && cd pete_boilerplate
+git clone https://github.com/shouston3/diary_boilerplate.git && cd diary_boilerplate
 ```
 
 # Quick start
@@ -34,7 +34,7 @@ mix phx.start
 
 # Rename project
 
-rename pete to your project name by following this gist:
+rename diary to your project name by following this gist:
 
 https://gist.github.com/nerdyworm/3d623b13bf0d6d664373e2f501f16423
 

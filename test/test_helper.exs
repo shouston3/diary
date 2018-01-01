@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(Pete.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Diary.Repo, :manual)
 

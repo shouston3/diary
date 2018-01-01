@@ -1,5 +1,5 @@
-defmodule Pete.Repo do
-  use Ecto.Repo, otp_app: :pete
+defmodule Diary.Repo do
+  use Ecto.Repo, otp_app: :diary
 
   @doc """
   Dynamically loads the repository url from the

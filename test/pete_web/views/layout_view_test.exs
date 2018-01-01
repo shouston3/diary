@@ -1,3 +1,3 @@
-defmodule PeteWeb.LayoutViewTest do
-  use PeteWeb.ConnCase, async: true
+defmodule DiaryWeb.LayoutViewTest do
+  use DiaryWeb.ConnCase, async: true
 end
