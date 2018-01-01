@@ -3,6 +3,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "npm run build:js && npm run build:elm && npm run build:css && npm run build:static",
     "build:js": "rollup -c rollup.config.js",
     "build:elm": "./elm.build.sh",
