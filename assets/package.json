@@ -10,7 +10,7 @@
     "build:static": "cp -R static/* ../priv/static",
     "build:watch": "nodemon -x 'npm run build' -e js,elm,css,png,svg",
     "build:js:watch": "rollup -c rollup.config.js -w",
-    "build:elm:watch": "elm-live elm/Main.elm --pushstate --output=../priv/static/js/elm.js",
+    "build:elm:watch": "elm-live elm/Home.elm --pushstate --output=../priv/static/js/elm.js",
     "build:css:watch": "sass --watch css/main.scss:../priv/static/css/app.css",
     "build:static:watch": "nodemon -e png,svg -x 'npm run build:static' -w static"
   },
