@@ -1,27 +1,26 @@
 {
-  "description": "diary boilerplate",
+  "name": "diary_boilerplate",
+  "desciption": "hello",
   "repository": {},
-  "license": "MIT",
+  "license": "ISC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "npm run build:js && npm run build:elm && npm run build:css && npm run build:static",
+    "build": "npm run build:static && npm run build:css && npm run build:js && npm run build:elm",
+    "build:static": "cp -R static/* ../priv/static/",
+    "build:css": "sass css/main.scss:../priv/static/css/app.css",
     "build:js": "rollup -c rollup.config.js",
     "build:elm": "./elm.build.sh",
-    "build:css": "sass css/main.scss:../priv/static/css/app.css",
-    "build:static": "cp -R static/* ../priv/static",
-    "build:watch": "nodemon -x 'npm run build' -e js,elm,css,png,svg",
     "build:js:watch": "rollup -c rollup.config.js -w",
-    "build:elm:watch": "elm-live elm/Home.elm --pushstate --output=../priv/static/js/elm.js",
-    "build:css:watch": "sass --watch css/main.scss:../priv/static/css/app.css",
-    "build:static:watch": "nodemon -e png,svg -x 'npm run build:static' -w static",
+    "build:elm:watch": "elm-live elm/Home.elm --output ../priv/static/js/elm.js --yes",
     "test": "echo \"no tests yet!\""
   },
+  "keywords": [],
+  "author": "",
   "dependencies": {
-    "rollup": "^0.53.2",
-    "tachyons-sass": "^4.9.2"
-  },
-  "devDependencies": {
-    "elm-live": "^2.7.5",
-    "nodemon": "^1.14.7"
+    "elm": "^0.18.0",
+    "rollup": "^0.53.3"
   }
 }

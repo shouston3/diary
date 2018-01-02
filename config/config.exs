@@ -12,7 +12,7 @@ config :diary,
 # Configures the endpoint
 config :diary, DiaryWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "peKwAEw/1unukI0H32BDtwSUKSY5+kxSm/MuUwjOYfZAPZYComuGVaTBHuXLPWSs",
+  secret_key_base: "76mAccIQnnHWGkPX6OJbCfYp0sIT+Pp/Na/soTZ+slzkOu/Y88gCcODBWKAO4zlH",
   render_errors: [view: DiaryWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Diary.PubSub,
            adapter: Phoenix.PubSub.PG2]

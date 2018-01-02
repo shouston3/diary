@@ -36,7 +36,7 @@ defmodule DiaryWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_diary_key",
-    signing_salt: "PCbeo55X"
+    signing_salt: "KhSm+uc0"
 
   plug DiaryWeb.Router
 

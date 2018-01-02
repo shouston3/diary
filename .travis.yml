@@ -5,7 +5,7 @@ language: elixir
 elixir:
   - 1.5
 addons:
-  postgresql: 9.4 # TODO: try to upgrade this
+  postgresql: 9.4 # TODO: look at upgrading this
 cache:
   directories:
     - _build
@@ -19,18 +19,15 @@ env:
 before_install:
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 install:
-  - gem install sass
   - mix do local.hex --force, local.rebar --force
   - mix do deps.get, compile, ecto.create, ecto.migrate
   - . $HOME/.nvm/nvm.sh
   - nvm install stable
   - nvm use stable
-  - npm --version
-  - node --version
   # Taken from: https://github.com/rtfeldman/node-test-runner#travis-ci
   - npm install -g elm@$ELM_VERSION elm-test
-  - git clone https://github.com/NoRedInk/elm-ops-tooling assets/elm-ops-tooling
-  - cd assets && elm-ops-tooling/with_retry.rb elm package install --yes && cd -
+  - git clone https://github.com/NoRedInk/elm-ops-tooling apps/av_web/assets/elm-ops-tooling
+  - cd apps/av_web/assets && elm-ops-tooling/with_retry.rb elm package install --yes && cd -
   - |
     if [ ! -d sysconfcpus/bin ];
     then
@@ -40,10 +37,9 @@ install:
       make && make install;
       cd ..;
     fi
-  - cd assets && npm install && npm run build && cd -
 script:
-  # - mix coveralls.json
-	- mix test
+  - mix coveralls.json
   - cd assets && npm test && cd -
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+

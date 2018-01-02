@@ -1,0 +1,15 @@
+{
+  "skip_files": [
+    "lib/diary.ex",
+    "lib/diary_web.ex",
+    "lib/diary/application.ex",
+    "lib/diary/repo.ex",
+    "lib/diary_web.ex",
+    "lib/diary_web/endpoint.ex",
+    "lib/diary_web/gettext.ex",
+    "lib/diary_web/router.ex",
+    "lib/diary_web/channels/user_socket.ex",
+    "lib/diary_web/views/error_helpers.ex",
+    "test/support"
+  ]
+}
