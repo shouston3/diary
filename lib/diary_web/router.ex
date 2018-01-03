@@ -20,7 +20,11 @@ defmodule DiaryWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", DiaryWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", DiaryWeb do
+    pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/days", DayController, except: [:new, :edit]
+    resources "/todos", TodoController, except: [:new, :edit]
+  end
 end
