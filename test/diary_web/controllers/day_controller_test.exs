@@ -32,7 +32,7 @@ defmodule DiaryWeb.DayControllerTest do
       conn = get conn, day_path(conn, :show, id)
       assert json_response(conn, 200)["data"] == %{
         "id" => id,
-        "date" => ~N[2010-04-17 14:00:00.000000],
+        "date" => "2010-04-17T14:00:00.000000",
         "diary_entry" => "some diary_entry"}
     end
 
@@ -52,7 +52,7 @@ defmodule DiaryWeb.DayControllerTest do
       conn = get conn, day_path(conn, :show, id)
       assert json_response(conn, 200)["data"] == %{
         "id" => id,
-        "date" => ~N[2011-05-18 15:01:01.000000],
+        "date" => "2011-05-18T15:01:01.000000",
         "diary_entry" => "some updated diary_entry"}
     end
 
