@@ -22,5 +22,9 @@
   "dependencies": {
     "elm": "^0.18.0",
     "rollup": "^0.53.3"
+  },
+  "devDependencies": {
+    "elm-live": "^2.7.5",
+    "nodemon": "^1.14.7"
   }
 }
